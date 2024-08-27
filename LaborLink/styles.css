@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --primary-color:#ff581f;
+    --secondary-color:#111111;
+    --secondary-color-light:#232220;
+    --text-light:#a3a3a3;
+    --white:#ffffff;
+    --black: #000000;
+    --max-width: 1200px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section__container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__header{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.section__subheader{
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 1rem;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.section__subheader::after{
+    position: absolute;
+    content:"";
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    height: 45px;
+    aspect-ratio: 1;
+    z-index: -1;
+    padding: 15px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: .75rem 1.5rem;
+    outline: none;
+    font-size: 1rem;
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__primary{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn span{
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn:hover span{
+    transform: translateX(5px);
+}
+
+img{
+    display: flex;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+html,
+body{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppines", sans-serif;
+    color: var(--white);
+}
+
+header{
+    background-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.8)
+    ),
+    url("assets/worker-at-the-construction-site-upscaled.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white  );
+}
+
+.nav__logo img{
+    border-radius: 100%;
+}
+.nav__links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link a{
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.link a:hover{
+    color: var(--primary-color);
+}
+
+.nav__menu__btn{
+    display: none;
+    font-size: 1.5rem;
+}
+
+
+.header__container{
+    padding-block: 5rem 12ren;
+}
+
+.header__container h1{
+    max-width: 900px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header__container .btn{
+    margin: auto;
+
+}
+
+.about{
+    background-color: var(--secondary-color);
+}
+
+
+.about__grid{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    background-color: var(--secondary-color-light);
+    /* transform: translateY(-5rem); */
+    border-radius: 10px;
+}
+
+.about__content .section__header{
+    margin-bottom: 1rem;
+}
+
+.about__content .para{
+    color: var(--text-light);
+}
+
+.about__list{
+    display: grid;
+    gap: 2rem;
+}
+
+.about__item{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about__item span{
+    padding: 13px 20px;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.about__item h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.stats{
+    background-color: var(--secondary-color);
+}
+
+.stats__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.stats__content .section__header{
+    margin-bottom: 1rem;
+}
+
+.stats__content .para{
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.stats__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.stats__card h1{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.stats__image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.stats__image img{
+    max-width: 250px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.team{
+    background-color: var(--secondary-color-light);
+}
+
+.team__container .para{
+    margin-block: 1rem  4rem;
+    color: var(--text-light);
+}
+
+.swiper{
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+.team__face .swiper-pagination-bullet-active{
+    background-color: var(--primary-color);
+}
+
+.team__face__card{
+    position: relative;
+    isolation: isolate;
+    max-width: 600px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.team__face__card span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 6rem;
+    line-height: 4rem;
+    color: var(--primary-color);
+    opacity: 0.1;
+}
+
+.team__face__card p{
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.team__face__details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.team__face__details img{
+    max-width: 100px;
+    border-radius: 20%;
+}
+
+.team__face__details h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.team__face__details h5{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
